@@ -1,0 +1,41 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: healthrecord-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/healthdb
+    username: postgres
+    password: ashishnayakA@1
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      patientService:
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: INFO
+    com.example: DEBUG
