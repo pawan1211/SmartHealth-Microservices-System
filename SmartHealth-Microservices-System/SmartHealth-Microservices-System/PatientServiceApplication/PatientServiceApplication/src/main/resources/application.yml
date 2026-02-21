@@ -8,7 +8,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/patientdb
     username: postgres
-    password: ashishnayakA@1
+    password: 
 
   jpa:
     hibernate:
