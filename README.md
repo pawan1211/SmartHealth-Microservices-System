@@ -121,13 +121,21 @@ public HealthRecordResponse fallback(..., Exception ex) {
 🛠 Technologies Used
 
 Component	Technology
-Backend	Spring Boot 3
+
+Backend	Spring Boot 4
+
 Service Discovery	Eureka
+
 Gateway	Spring Cloud Gateway
+
 Communication	RestTemplate
+
 Resilience	Resilience4j
+
 Logging	SLF4J
+
 Database	PostgreSQL
+
 Monitoring	Spring Actuator
 
 🚀 How to Run
